@@ -1,0 +1,4 @@
+# Vim temp files
+.*.swp
+.sw*
+Session.vim
