@@ -179,6 +179,13 @@ let g:airline_powerline_fonts=1
 " (default is \u2739 [twelve-pointed black star] for some reason)
 let g:airline#extensions#whitespace#symbol="\u2021"
 set laststatus=2
+" toggle spacing checks
+nmap <F7> :AirlineToggleWhitespace<CR>
+
+" tagbar keymap and settings
+" sort by file order, not alphabetically
+let g:tagbar_sort = 0
+nmap <F8> :TagbarToggle<CR>
 
 " Site-specific configuration
 " expand() avoids system call differences on Cygwin
