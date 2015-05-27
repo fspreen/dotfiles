@@ -174,6 +174,10 @@ colo mine
 
 " vim-airline settings
 let g:airline_powerline_fonts=1
+" Prefer \u2420 [S/P] if/when Terminus supports it
+" for now, double-dagger
+" (default is \u2739 [twelve-pointed black star] for some reason)
+let g:airline#extensions#whitespace#symbol="\u2021"
 set laststatus=2
 
 " Site-specific configuration
