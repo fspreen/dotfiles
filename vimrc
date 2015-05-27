@@ -187,6 +187,20 @@ nmap <F7> :AirlineToggleWhitespace<CR>
 let g:tagbar_sort = 0
 nmap <F8> :TagbarToggle<CR>
 
+" syntastic keymap and settings
+nmap <F9> :SyntasticCheck<CR>
+" TODO screen makes S-F9 problematic somehow?
+nmap <F10> :SyntasticInfo<CR>
+let g:syntastic_enable_signs = 1
+" disable a language check like so:
+"let g:syntastic_c_checkers = [ ]
+" default is '>>'; use Unicode/Latin1 >> symbol instead
+let g:syntastic_error_symbol = "\u00BB"
+let g:syntastic_warning_symbol = "\u00BB"
+" default is 'S>'; use Unicode triple-bar symbol instead
+let g:syntastic_style_error_symbol = "\u2261"
+let g:syntastic_style_warning_symbol = "\u2261"
+
 " Site-specific configuration
 " expand() avoids system call differences on Cygwin
 if filereadable(expand('~/.vim/siterc'))
