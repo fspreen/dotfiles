@@ -185,7 +185,7 @@ nmap <F7> :AirlineToggleWhitespace<CR>
 " tagbar keymap and settings
 " sort by file order, not alphabetically
 let g:tagbar_sort = 0
-nmap <F8> :TagbarToggle<CR>
+nmap <F12> :TagbarToggle<CR>
 
 " syntastic keymap and settings
 nmap <F9> :SyntasticCheck<CR>
@@ -200,6 +200,14 @@ let g:syntastic_warning_symbol = "\u00BB"
 " default is 'S>'; use Unicode triple-bar symbol instead
 let g:syntastic_style_error_symbol = "\u2261"
 let g:syntastic_style_warning_symbol = "\u2261"
+
+" NERDTree keymap and settings
+nmap <F8> :NERDTreeToggle<CR>
+" Use fancy arrows (con:  no grouping lines)
+let NERDTreeDirArrows = 1
+" Defaults are \u25B8 and \u25BE but Terminus doesn't have those chars
+let NERDTreeDirArrowExpandable = "\u25B6"
+let NERDTreeDirArrowCollapsible = "\u25BC"
 
 " Site-specific configuration
 " expand() avoids system call differences on Cygwin
