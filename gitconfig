@@ -16,6 +16,8 @@
 	tool = vimdiff
 [merge]
 	tool = vimdiff
+[push]
+	default = simple
 #[user]
 	#name = Fred Spreen
 	#email = fspreen@users.noreply.github.com
