@@ -35,3 +35,19 @@ Alternatively:
 All submodules that need updating:
 
     $ git submodule update --remote
+
+## Change a Submodule URL ##
+Edit the .gitmodules file to update the new URL.  (This file was created when
+the submodule was added.)  Then synchronize the change with the Git
+configuration:
+
+``$ git submodule sync``
+
+By default, this updates all submodules; consult the official Git
+documentation for information on limiting this.
+
+It also appears to update the appropriate remotes in the local copy of the
+submodule's repository.  (That is, if you move to the submodule's directory
+and execute ``git remote -v`` it will show the new URL.)
+
+Remember to commit the change to .gitmodules when things are satisfactory.
