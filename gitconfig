@@ -23,4 +23,4 @@
 	#email = fspreen@users.noreply.github.com
 [include]
 	path = ~/.gitconfig_siterc
-# vim:noet:sw=8 sts=0
+# vim:noet:sw=8 sts=0 ft=gitconfig
