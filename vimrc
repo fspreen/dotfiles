@@ -209,6 +209,40 @@ let NERDTreeDirArrows = 1
 let NERDTreeDirArrowExpandable = "\u25B6"
 let NERDTreeDirArrowCollapsible = "\u25BC"
 
+" NERDTree Git plugin changes
+" Default values, mostly NOT supported by Terminus:
+" 	'Modified'	U-2739 twelve-pointed black star
+" 	'Staged'	U-271A heavy greek cross
+" 	'Untracked'	U-272D outlined black star
+" 	'Renamed'	U-279C heavy round-tipped rightwards arrow
+" 	'Unmerged'	U-2550 box drawings double horizontal
+" 	'Deleted'	U-2716 heavy multiplication X
+" 	'Dirty'		U-2717 ballot X
+" 	'Clean'		U-2714 heavy check mark, U-FE0E variation selector-15
+" 	'Unknown'	ASCII question mark
+" My values, ARE supported by Terminus:
+" 	'Modified'	ASCII asterisk
+" 	'Staged'	U-E0A0 [powerline version control]
+" 	'Untracked'	ASCII exclamation mark
+" 	'Renamed'	U-2192 rightwards arrow
+" 	'Unmerged'	U-2194 left right arrow
+" 	'Deleted'	U-2205 empty set
+" 	'Dirty'		U-00D7 multiplication sign
+" 	'Clean'		U-2714 heavy check mark
+" 	'Unknown'	ASCII question mark
+" Note that \uXXXX codes must be in double-quotes, not single
+let g:NERDTreeIndicatorMapCustom = {
+			\ "Modified"  : '*',
+			\ "Staged"    : "\uE0A0",
+			\ "Untracked" : '!',
+			\ "Renamed"   : "\u2192",
+			\ "Unmerged"  : "\u2194",
+			\ "Deleted"   : "\u2205",
+			\ "Dirty"     : "\u00D7",
+			\ "Clean"     : "\u2714",
+			\ "Unknown"   : '?',
+			\ }
+
 " Site-specific configuration
 " expand() avoids system call differences on Cygwin
 if filereadable(expand('~/.vim/siterc'))
