@@ -1,5 +1,11 @@
 [alias]
-	graph = log --graph --oneline --all --date-order --decorate
+	graph = log --graph --all --date-order --oneline --decorate
+	graph-when = log --graph --all --date-order --format=graph-when
+	graph-who = log --graph --all --date-order --format=graph-who
+[pretty]
+	# These assume a 7-character wide abbreviated hash
+	graph-when = "%C(3)%h%C(reset) %s%C(auto)%d%C(reset)%n        %C(12)%aD%C(reset) %C(6)%ar%C(reset)"
+	graph-who = "%C(3)%h%C(reset) %s%C(auto)%d%C(reset)%n        %C(2)Authored:  %C(12)%aD%C(8) - %an <%ae>%C(reset)%n        %C(2)Committed: %C(12)%cD%C(8) - %cn <%ce>%C(reset)"
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
