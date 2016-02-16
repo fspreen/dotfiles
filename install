@@ -19,6 +19,8 @@ case "$1" in
         mv ~/.gitignore "$dirold/.gitignore"
         mv ~/lesscolors "$dirold/lesscolors"
         mv ~/.mailcap   "$dirold/.mailcap"
+        mv ~/.muttrc    "$dirold/.muttrc"
+        mv ~/.mutt      "$dirold/.mutt"
         mv ~/.screenrc  "$dirold/.screenrc"
         mv ~/.vimrc     "$dirold/.vimrc"
         mv ~/.vim       "$dirold/.vim"
@@ -29,6 +31,8 @@ case "$1" in
         cp -p  "$dirold/.gitignore" ~/.gitignore
         cp -p  "$dirold/lesscolors" ~/lesscolors
         cp -p  "$dirold/.mailcap"   ~/.mailcap
+        cp -p  "$dirold/.muttrc"    ~/.muttrc
+        cp -pr "$dirold/.mutt"      ~/.mutt
         cp -p  "$dirold/.screenrc"  ~/.screenrc
         cp -p  "$dirold/.vimrc"     ~/.vimrc
         cp -pr "$dirold/.vim"       ~/.vim
@@ -39,9 +43,13 @@ case "$1" in
         ln -s "$dirhere/gitignore"  ~/.gitignore
         ln -s "$dirhere/lesscolors" ~/lesscolors
         ln -s "$dirhere/mailcap"    ~/.mailcap
+        ln -s "$dirhere/muttrc"     ~/.muttrc
+        mkdir ~/.mutt
+        echo "# vim:ft=muttrc" > ~/.mutt/siterc
         ln -s "$dirhere/screenrc"   ~/.screenrc
         ln -s "$dirhere/vimrc"      ~/.vimrc
         ln -s "$dirhere/vim"        ~/.vim
+
         ;;
 
     *)

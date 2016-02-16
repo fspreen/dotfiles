@@ -1,0 +1,192 @@
+# Keep Mutt's files confined to ~/.mutt for a tidier home directory.
+# Don't use ~/Mail, ~/sent, or ~/postponed
+set folder      = "~/.mutt/mail"
+set record      = "~/.mutt/sent"
+set postponed   = "~/.mutt/postponed"
+# NOTE:  It may be desirable to link to a remote account by default.  In that
+# case, replace the above values with something similar to those specified in
+# the examples under "MULTIPLE ACCOUNTS" later in this file.
+
+set certificate_file    = "~/.mutt/mutt_certificates"
+set header_cache        = "~/.mutt/cache"
+
+# Explicitly set the editor
+set editor="vi"
+
+# -----------
+# KEYBINDINGS
+# -----------
+bind editor <space>     noop
+
+# Change message pager to work a bit more like 'less'
+bind pager  <space>     noop
+bind pager  <return>    noop
+bind pager  <up>        previous-line
+bind pager  <down>      next-line
+
+# -------------
+# MISC BEHAVIOR
+# -------------
+
+# DON'T set unread messages as "old" upon exit
+set mark_old = no
+
+# Don't use local email address if we can help it
+set reverse_name = yes
+
+# ------
+# COLORS
+# ------
+# Anything not specified here may be set in /etc/Muttrc or similar.
+
+# Color notes:
+# brightcolor16 --> bold black (256-color terminals)
+# brightblack --> bold color 8 (dark gray)
+# Use color names or colorX number
+# Prefix with 'bright' for bold version
+# Syntax:
+# color <object> <foreground> <background>
+
+color status brightcolor16 white
+color attachment brightblue default
+
+# Mail listings
+color tree green default
+# All messages
+color index default default ~A
+# New messages
+color index brightwhite default ~N
+# Deleted messages
+color index color8 default ~D
+
+# Message header fields
+color hdrdefault magenta default
+color header brightmagenta default ^Subject:
+color header brightmagenta default ^Date:
+color header brightmagenta default ^From:
+color header brightmagenta default ^To:
+
+# The line wrap '+' symbol
+color markers brightred default
+
+# ----------
+# UI OPTIONS
+# ----------
+
+# Explicitly view all headers.
+# (Debian-based systems hide most of them with /etc/Muttrc.)
+unignore *
+
+set collapse_unread = no
+set help = no
+set status_on_top = yes
+
+# Auto-view HTML (see ~/.mailcap)
+# Must have a text browser installed (e.g. links, w3m) or errors appear
+# Remove with:  unauto_view text/html
+auto_view text/html
+
+# Pager stops at bottom (default behavior is to move to next message)
+set pager_stop = yes
+
+# Show a slice of message listings in the pager
+set pager_index_lines = 6
+
+# Sorting
+# Sort by threaded, reverse (most recent first); sort threads by last msg date
+set sort = reverse-threads
+set sort_aux = last-date
+# Alternately, flat sorting by date (recent first)
+#set sort = reverse-date
+
+# -----------------
+# MULTIPLE ACCOUNTS
+# -----------------
+# This is where things get tricky...
+# A good strategy is to set up 'macro index' commands to switch folders on a
+# keypress.  Paired with those, set up 'folder-hook' commands to set variables
+# which are specific to each account.  Finally, use the 'alternates' command to
+# specify the email address(es) belonging to the user.
+#
+# To summarize:
+# 1. macros to switch accounts
+# 2. folder-hook to set vars for each account
+# 3. alternates
+
+# Identify email address(es) as "me"
+#alternates '^jdoe@example.com$'
+
+# By default, don't store usernames or passwords.
+# (helps prevent credential bleed when switching accounts)
+account-hook . "unset imap_user imap_pass imap_authenticators ;\
+unset pop_user pop_pass pop_authenticators ;\
+unset smtp_pass"
+
+# Link to an external file for stuff that shouldn't get pushed into GitHub
+# (like, say, account usernames)
+source ~/.mutt/siterc
+
+# ----- EXAMPLE -----
+# [function-key macros for account switching]
+# Note that in Debian-based systems, the F1 key is bound to a custom command
+# that brings up a text version of the Mutt manual.
+
+# Local Unix/Linux account
+#macro index <f1> "<change-folder>/var/mail/$USER<enter>"
+
+# Gmail IMAP
+#macro index <f2> "<change-folder>imaps://jdoe@imap.gmail.com<enter>"
+
+# Outlook IMAP
+#macro index <f3> "<change-folder>imap://jdoe@server.example.com<enter>"
+
+# ----- EXAMPLE -----
+# [local Unix/Linux account]
+# Basically some default settings, but double-check your system
+# Also see the commands at the top of this file
+
+#folder-hook /var/mail/$USER "set folder='~/.mutt/mail' ;\
+#set spoolfile='/var/mail/$USER' ;\
+#set record='~/.mutt/sent' ;\
+#set postponed='~/.mutt/postponed' ;\
+#unset from"
+
+# If trash-folder patch is installed, add:
+#unset trash
+
+# ----- EXAMPLE -----
+# [Gmail IMAP]
+#folder-hook imaps://jdoe@imap.gmail.com "set folder='imaps://imap.gmail.com' ;\
+#set spoolfile='+INBOX' ;\
+#set record='+[Gmail]/Sent Mail' ;\
+#set postponed='+[Gmail]/Drafts' ;\
+#set from='John Doe <jdoe@gmail.com>' ;\
+#set imap_idle=yes"
+
+# TODO: sending via SMTP
+# TODO: imap_authenticators
+
+# If trash-folder patch is installed, add:
+#set trash='+[Gmail]/Trash'
+
+# Helpful Gmail macros
+#macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+#macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+#macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+#macro index gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+
+# ----- EXAMPLE -----
+# [Outlook IMAP, SMTP]
+# The Outlook server must support IMAP and/or SMTP.  This may be disabled by
+# the server administrator.
+#folder-hook imap://jdoe@server.example.com "set spoolfile='+INBOX' ;\
+#set record='+Sent Items' ;\
+#set postponed='+Drafts' ;\
+#set smtp_url='smtp://jdoe@server.example.com' ;\
+#set from='John Doe <jdoe@example.com>' ;\
+#set imap_idle=yes"
+
+# If trash-folder patch is installed, add:
+#set trash="+Deleted Items"
+
+# TODO: imap_authenticators
