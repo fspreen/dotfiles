@@ -31,6 +31,9 @@ if &t_Co == 256 || has("gui_running")
 	" Right-edge column as dark gray background
 	hi ColorColumn	ctermbg=233 guibg=#121212
 
+	" Spelling violations highlighted with...this brown egg-yolk color
+	hi SpellBad	ctermbg=58
+
 	" Dimmer 'diff' highlights
 
 	"DiffAdd	term=bold ctermbg=4 guibg=DarkBlue
