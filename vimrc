@@ -250,6 +250,28 @@ let g:NERDTreeIndicatorMapCustom = {
 			\ "Unknown"   : '?',
 			\ }
 
+" Vimwiki settings
+" Don't create temporary wikis
+let g:vimwiki_global_ext = 0
+" Avoid using the netrw plugin; create an index instead
+let g:vimwiki_dir_link = 'index'
+" Default is a little too generic
+let g:vimwiki_toc_header = 'Table of Contents'
+" Automatically invokes :lcd - allows NERDTree to function as a wiki index!
+let g:vimwiki_auto_chdir = 1
+" Change options for the default wiki
+let g:vimwiki_list = [{
+	\ 'path'           : '~/notes/',
+	\ 'index'          : 'index',
+	\ 'ext'            : '.md',
+	\ 'syntax'         : 'markdown',
+	\ 'diary_rel_path' : 'Logbook',
+	\ 'diary_index'    : 'index',
+	\ 'diary_header'   : 'Logbook',
+	\ }]
+" I like the .wiki extension, but if we're writing in MarkDown then .md must
+" be used if we want GitHub to preview the files properly.
+
 " Site-specific configuration
 " expand() avoids system call differences on Cygwin
 if filereadable(expand('~/.vim/siterc'))
