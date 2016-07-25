@@ -1,2 +1,4 @@
 # Don't include site-specific Vim settings
 vim/siterc
+# Don't include any spell-check files (info leak risk)
+vim/spell/
