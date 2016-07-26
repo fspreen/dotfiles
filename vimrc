@@ -57,6 +57,13 @@ if &term =~ "screen.*"
 	set t_kN=[6;*~
 	set t_kP=[5;*~
 endif
+if &term =~ "xterm*"
+	" Change italics to standout
+	" Xterm doesn't support italics (neither does the Terminus font),
+	" but Vim tries to use them anyway
+	set t_ZH=[7m
+	set t_ZR=[27m
+endif
 
 " Remove some GUI options
 set guioptions-=r " Right-hand scrollbar
