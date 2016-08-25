@@ -23,11 +23,6 @@ if has("autocmd")
 		\   exe "normal g`\"" |
 		\ endif
 
-		" TODO check against ftplugin/gitcommit.vim, maybe better way
-		" to do this
-		" Jump to top of file for Git commit messages
-		autocmd BufReadPost COMMIT_EDITMSG exe "normal gg"
-
 		" Trim trailing whitespace on Python, Perl, C, C++, .h files
 		autocmd BufWrite *.py,*.pl,*.c,*.cpp,*.c++,*.h :%s/[ \t]\+$//e
 
