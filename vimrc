@@ -26,6 +26,12 @@ if has("autocmd")
 		" Trim trailing whitespace on Python, Perl, C, C++, .h files
 		autocmd BufWrite *.py,*.pl,*.c,*.cpp,*.c++,*.h :%s/[ \t]\+$//e
 
+		" Close NERDTree if it's the only thing left open in a tab
+		autocmd BufEnter *
+		\ if (winnr("$")==1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) |
+		\    q |
+		\ endif
+
 	" end autocmd group
 	augroup END
 else
@@ -277,7 +283,7 @@ let g:vimwiki_list = [{
 " Site-specific configuration
 " expand() avoids system call differences on Cygwin
 if filereadable(expand('~/.vim/siterc'))
-    source ~/.vim/siterc
+	source ~/.vim/siterc
 endif
 
 " Modeline to set the usual tabs
