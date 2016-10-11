@@ -119,8 +119,7 @@ set diffopt=filler,iwhite
 
 " Don't use - when showing deletions in diff
 " Don't use | in vertical separators
-" NOTE extra space at end
-set fillchars+=diff:\ ,vert:\ 
+set fillchars=vert:\ ,diff:\ ,fold:-
 
 " 80-column marker function
 function RightEdge()
