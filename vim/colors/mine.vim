@@ -26,7 +26,11 @@ if &t_Co == 256 || has("gui_running")
 
 	" Special chars as dark gray
 	hi SpecialKey	cterm=bold ctermfg=8 gui=bold guifg=#555555
-	hi LineNr	cterm=bold ctermfg=8 gui=bold guifg=#555555
+
+	" Left margin columns with dark gray background
+	hi LineNr	ctermbg=232 ctermfg=8 cterm=bold
+	hi SignColumn	ctermbg=234
+	hi FoldColumn	ctermbg=234
 
 	" Right-edge column as dark gray background
 	hi ColorColumn	ctermbg=233 guibg=#121212
@@ -40,10 +44,10 @@ if &t_Co == 256 || has("gui_running")
 	"DiffChange	term=bold ctermbg=5 guibg=DarkMagenta
 	"DiffDelete	term=bold ctermfg=12 ctermbg=6 gui=bold guifg=Blue guibg=DarkCyan
 	"DiffText	term=reverse cterm=bold ctermbg=9 gui=bold guibg=Red
-	hi DiffAdd	ctermbg=18 guibg=#000087
-	hi DiffChange	ctermbg=93 guibg=#8700ff
-	hi DiffDelete	ctermbg=17 guibg=#00005f
-	hi DiffText	ctermbg=88 guibg=#870000
+	hi DiffAdd	ctermbg=22
+	hi DiffChange	ctermbg=17
+	hi DiffDelete	ctermbg=52
+	hi DiffText	ctermbg=20 cterm=none
 
 	" Blue tab line
 	hi TabLine	cterm=bold ctermbg=25 ctermfg=16  gui=bold guibg=#005faf guifg=#000000
