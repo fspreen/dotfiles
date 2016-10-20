@@ -55,7 +55,7 @@ if &t_Co == 256 || has("gui_running")
 	hi TabLineFill	cterm=none ctermbg=25             gui=none guibg=#005faf
 
 	" Blue separators
-	hi VertSplit	cterm=none ctermbg=25 ctermfg=26 gui=none guibg=#005faf guifg=#005fdf
+	hi VertSplit	cterm=none            ctermfg=26 gui=none guibg=#005faf guifg=#005fdf
 	hi StatusLine	cterm=bold ctermbg=26 ctermfg=15 gui=bold guibg=#005fdf guifg=#ffffff
 	hi StatusLineNC	cterm=bold ctermbg=25 ctermfg=16 gui=bold guibg=#005faf guifg=#000000
 

@@ -118,8 +118,7 @@ set wrapmargin=0
 set diffopt=filler,iwhite
 
 " Don't use - when showing deletions in diff
-" Don't use | in vertical separators
-set fillchars=vert:\ ,diff:\ ,fold:-
+set fillchars=vert:┃,diff:\ ,fold:-
 
 " 80-column marker function
 function RightEdge()
