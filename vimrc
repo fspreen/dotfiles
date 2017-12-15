@@ -225,6 +225,7 @@ let NERDTreeDirArrowCollapsible = "\u25BC"
 " 	'Deleted'	U-2716 heavy multiplication X
 " 	'Dirty'		U-2717 ballot X
 " 	'Clean'		U-2714 heavy check mark, U-FE0E variation selector-15
+" 	'Ignored'	U-2612 ballot box with X
 " 	'Unknown'	ASCII question mark
 " My values, ARE supported by Terminus:
 " 	'Modified'	ASCII asterisk
@@ -235,6 +236,7 @@ let NERDTreeDirArrowCollapsible = "\u25BC"
 " 	'Deleted'	U-2205 empty set
 " 	'Dirty'		U-00D7 multiplication sign
 " 	'Clean'		U-2714 heavy check mark
+" 	'Ignored'	U-00AC not sign
 " 	'Unknown'	ASCII question mark
 " Note that \uXXXX codes must be in double-quotes, not single
 let g:NERDTreeIndicatorMapCustom = {
@@ -246,6 +248,7 @@ let g:NERDTreeIndicatorMapCustom = {
 			\ "Deleted"   : "\u2205",
 			\ "Dirty"     : "\u00D7",
 			\ "Clean"     : "\u2714",
+			\ "Ignored"   : "\u00AC",
 			\ "Unknown"   : '?',
 			\ }
 
