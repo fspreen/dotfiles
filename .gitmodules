@@ -9,7 +9,7 @@
 	url = https://github.com/majutsushi/tagbar
 [submodule "syntastic"]
 	path = vim/pack/default/start/syntastic
-	url = https://github.com/scrooloose/syntastic
+	url = https://github.com/vim-syntastic/syntastic
 [submodule "nerdtree"]
 	path = vim/pack/default/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree
