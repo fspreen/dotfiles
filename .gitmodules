@@ -19,3 +19,4 @@
 [submodule "vimwiki"]
 	path = vim/pack/default/start/vimwiki
 	url = https://github.com/vimwiki/vimwiki
+	branch = dev
