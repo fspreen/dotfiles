@@ -38,13 +38,6 @@ else
 	set autoindent
 endif
 
-" ----- Pathogen Plugin Handler -----
-"  expand() avoids system call differences on Cygwin
-if filereadable(expand('~/.vim/bundle/vim-pathogen/autoload/pathogen.vim'))
-	runtime bundle/vim-pathogen/autoload/pathogen.vim
-	execute pathogen#infect()
-endif
-
 " ----- Interface Options -----
 
 " Choose specific backspace behavior
