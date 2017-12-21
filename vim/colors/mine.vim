@@ -31,6 +31,7 @@ if &t_Co == 256 || has("gui_running")
 	hi LineNr	ctermbg=232 ctermfg=8 cterm=bold
 	hi SignColumn	ctermbg=234
 	hi FoldColumn	ctermbg=234
+	hi Folded	ctermbg=234
 
 	" Right-edge column as dark gray background
 	hi ColorColumn	ctermbg=233 guibg=#121212
@@ -61,6 +62,13 @@ if &t_Co == 256 || has("gui_running")
 
 	" Green comments
 	hi Comment	ctermfg=34 guifg=#00df87
+
+	" === Plugin-specific colors ===
+	" = Syntastic =
+	" Compare SignColumn for background
+	" Red error, Yellow warning
+	hi SyntasticErrorSign	ctermfg=9	ctermbg=234
+	hi SyntasticWarningSign	ctermfg=11	ctermbg=234
 else
 	" === normal 16-color terminal ===
 
