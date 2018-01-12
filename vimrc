@@ -179,7 +179,7 @@ let g:airline_powerline_fonts=1
 " Prefer \u2261 triple bar shape for maximum line number
 " (default is \u2630 [Yijing trigam for heaven])
 " The default is not supported by Terminus
-let g:airline_symbols.maxlinenr = "\u2261"
+let g:airline_symbols.linenr = "\u2261"
 " Prefer \u2420 [S/P] if/when Terminus supports it
 " for now, double-dagger
 " (default is \u2739 [twelve-pointed black star] for some reason)
