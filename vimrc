@@ -176,13 +176,20 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 let g:airline_powerline_fonts=1
-" Prefer \u2261 triple bar shape for maximum line number
-" (default is \u2630 [Yijing trigam for heaven])
-" The default is not supported by Terminus
+" Fix some symbols which are not supported by Terminus
+" Prefer U+2261 IDENTICAL TO (triple bar shape)
+" default is U+2630 YIJING TRIGAM FOR HEAVEN
 let g:airline_symbols.linenr = "\u2261"
-" Prefer \u2420 [S/P] if/when Terminus supports it
-" for now, double-dagger
-" (default is \u2739 [twelve-pointed black star] for some reason)
+" Prefer U+2204 THERE DOES NOT EXIST
+" default is U+0246 LATIN CAPITAL LETTER E WITH STROKE
+" (strangely, the airline documentation is not consistent with the code here)
+let g:airline_symbols.notexists = "\u2204"
+" Prefer U+E0A2 [powerline lock]
+" default is U+1F512 LOCK
+let g:airline_symbols.crypt = "\uE0A2"
+" Prefer U+2420 SYMBOL FOR SPACE [S/P] if/when Terminus supports it
+" for now, use U+2021 DOUBLE DAGGER
+" default is U+2739 TWELVE-POINTED BLACK STAR for some reason
 let g:airline#extensions#whitespace#symbol="\u2021"
 set laststatus=2
 " toggle spacing checks
