@@ -221,6 +221,9 @@ let NERDTreeDirArrows = 1
 " Defaults are \u25B8 and \u25BE but Terminus doesn't have those chars
 let NERDTreeDirArrowExpandable = "\u25B6"
 let NERDTreeDirArrowCollapsible = "\u25BC"
+" Ignorable file types:  default is just ['\~$']
+" Ignore *.pyc files
+let NERDTreeIgnore=['\.pyc$[[file]]', '\~$']
 
 " NERDTree Git plugin changes
 " Default values, mostly NOT supported by Terminus:
