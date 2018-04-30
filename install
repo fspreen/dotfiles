@@ -23,6 +23,7 @@ case "$1" in
         mv ~/.mailcap       "$dirold/.mailcap"
         mv ~/.muttrc        "$dirold/.muttrc"
         mv ~/.mutt          "$dirold/.mutt"
+        mv ~/.tmux.conf     "$dirold/.tmux.conf"
         mv ~/.screenrc      "$dirold/.screenrc"
         mv ~/.vimrc         "$dirold/.vimrc"
         mv ~/.vim           "$dirold/.vim"
@@ -37,6 +38,7 @@ case "$1" in
         cp -p  "$dirold/.mailcap"       ~/.mailcap
         cp -p  "$dirold/.muttrc"        ~/.muttrc
         cp -pr "$dirold/.mutt"          ~/.mutt
+        cp -p  "$dirold/.tmux.conf"     ~/.tmux.conf
         cp -p  "$dirold/.screenrc"      ~/.screenrc
         cp -p  "$dirold/.vimrc"         ~/.vimrc
         cp -pr "$dirold/.vim"           ~/.vim
@@ -52,6 +54,7 @@ case "$1" in
         ln -s "$dirhere/muttrc"         ~/.muttrc
         mkdir ~/.mutt
         echo "# vim:ft=muttrc" > ~/.mutt/siterc
+        ln -s "$dirhere/tmux.conf"      ~/.tmux.conf
         ln -s "$dirhere/screenrc"       ~/.screenrc
         ln -s "$dirhere/vimrc"          ~/.vimrc
         ln -s "$dirhere/vim"            ~/.vim
