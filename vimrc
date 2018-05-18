@@ -107,8 +107,8 @@ set nowrap
 set textwidth=0
 set wrapmargin=0
 
-" Ignore whitespace when 'diff'ing
-set diffopt=filler,iwhite
+" Ignore whitespace when 'diff'ing and default to a side-by-side diff
+set diffopt=vertical,filler,iwhite
 
 " Don't use - when showing deletions in diff
 set fillchars=vert:┃,diff:\ ,fold:-
