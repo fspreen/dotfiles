@@ -204,6 +204,12 @@ nmap <F12> :TagbarToggle<CR>
 nmap <F9> :SyntasticCheck<CR>
 " TODO screen makes S-F9 problematic somehow?
 nmap <F10> :SyntasticInfo<CR>
+" Don't invoke Syntastic after every save (this can slow things down,
+" especially with Python projects); use the F9 keybinding (above) instead
+let g:syntastic_mode_map = {
+	\ "mode" : "passive",
+	\ "active_filetypes" : [],
+	\ "passive_filetypes": [] }
 let g:syntastic_enable_signs = 1
 " disable a language check like so:
 "let g:syntastic_c_checkers = [ ]
