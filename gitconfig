@@ -22,6 +22,10 @@
 	showbranch = true
 	status = true
 	ui = true
+[color "diff"]
+	meta = blue bold
+[color "status"]
+	branch = green bold
 [diff]
 	submodule = log
 	tool = vimdiff
