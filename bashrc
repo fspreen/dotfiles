@@ -69,7 +69,7 @@ alias grep='grep --color=auto'
 
 # For certain terminals, set the title bar to user@host:dir
 case "$TERM" in
-    xterm*|rxvt*|screen*)
+    xterm*|rxvt*|screen*|st*)
         #    Non-printing char escapes
         #    VV                 VV
         #      Titlebar escapes
