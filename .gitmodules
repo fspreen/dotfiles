@@ -1,15 +1,15 @@
 [submodule "airline"]
 	path = vim/pack/default/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "ale"]
+	path = vim/pack/default/start/ale
+	url = https://github.com/w0rp/ale
 [submodule "fugitive"]
 	path = vim/pack/default/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "tagbar"]
 	path = vim/pack/default/start/tagbar
 	url = https://github.com/majutsushi/tagbar
-[submodule "syntastic"]
-	path = vim/pack/default/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic
 [submodule "nerdtree"]
 	path = vim/pack/default/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree
