@@ -194,6 +194,10 @@ let g:airline_symbols.notexists = "\u2204"
 " Prefer U+E0A2 [powerline lock]
 " default is U+1F512 LOCK
 let g:airline_symbols.crypt = "\uE0A2"
+" Prefer U+2248 ALMOST EQUAL TO
+" default is U+26A1 HIGH VOLTAGE SIGN
+" (default is double-wide? corrupt on st+Terminus, 2x width on DejaVu+MinTTY)
+let g:airline_symbols.dirty = "\u2248"
 " Prefer U+2420 SYMBOL FOR SPACE [S/P] if/when Terminus supports it
 " for now, use U+2021 DOUBLE DAGGER
 " default is U+2739 TWELVE-POINTED BLACK STAR for some reason
