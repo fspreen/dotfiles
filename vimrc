@@ -38,6 +38,16 @@ else
 	set autoindent
 endif
 
+" Modeline bug guard
+" xref:  https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
+" xref:  https://nvd.nist.gov/vuln/detail/CVE-2019-12735
+" xref:  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12735
+if v:version < 801 || (v:version == 801 && !has("patch1365"))
+	" pass
+	set modelines=0
+	set nomodeline
+endif
+
 " ----- Interface Options -----
 
 " Choose specific backspace behavior
