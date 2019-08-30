@@ -48,6 +48,9 @@ if v:version < 801 || (v:version == 801 && !has("patch1365"))
 	set nomodeline
 endif
 
+" Sudo write
+cmap w!! w !sudo tee >/dev/null %
+
 " ----- Interface Options -----
 
 " Choose specific backspace behavior
