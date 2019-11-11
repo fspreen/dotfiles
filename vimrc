@@ -294,6 +294,13 @@ let g:vimwiki_list = [{
 " I like the .wiki extension, but if we're writing in MarkDown then .md must
 " be used if we want GitHub to preview the files properly.
 
+" ALE settings
+" Tell pyls not to use pylint.  If pylint is installed, ALE will use it
+" directly.
+let g:ale_python_pyls_config = { 'pyls' : {
+	\ 'plugins' : {'pylint' : {'enabled' : v:false }}
+	\ }}
+
 " Site-specific configuration
 " expand() avoids system call differences on Cygwin
 if filereadable(expand('~/.vim/siterc'))
