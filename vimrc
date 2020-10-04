@@ -259,7 +259,7 @@ let NERDTreeIgnore=['\.pyc$[[file]]', '\~$']
 " 	'Ignored'	U-00AC not sign
 " 	'Unknown'	ASCII question mark
 " Note that \uXXXX codes must be in double-quotes, not single
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
 			\ "Modified"  : '*',
 			\ "Staged"    : "\uE0A0",
 			\ "Untracked" : '!',
