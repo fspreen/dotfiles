@@ -2,6 +2,12 @@
 	graph = log --graph --all --date-order --oneline --decorate
 	graph-when = log --graph --all --date-order --format=graph-when
 	graph-who = log --graph --all --date-order --format=graph-who
+	cheatsheet = "!echo 'git merge <otherbranch>:' ; \
+		echo '    merge <otherbranch> into HEAD (commit on HEAD if needed)' ; \
+		echo '    HEAD branch moves, but <otherbranch> does not change' ; \
+		echo 'git rebase <otherbranch>:' ; \
+		echo '    transplant current branch onto <otherbranch>' ; \
+		echo '    HEAD branch moves, but <otherbranch> does not change'"
 [pretty]
 	# These assume a 7-character wide abbreviated hash
 	graph-when = "%C(3)%h%C(reset) %s%C(auto)%d%C(reset)%n        %C(12)%aD%C(reset) %C(6)%ar%C(reset)"
