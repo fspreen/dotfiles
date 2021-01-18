@@ -23,3 +23,6 @@
 [submodule "rust.vim"]
 	path = vim/pack/default/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim
+[submodule "vim/pack/default/start/jellybeans.vim"]
+	path = vim/pack/default/start/jellybeans.vim
+	url = https://github.com/nanotech/jellybeans.vim
