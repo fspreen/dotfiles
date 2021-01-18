@@ -189,7 +189,8 @@ set colorcolumn=+1
 " Auto-detect is nice, but it isn't always right.
 set background=dark
 " ~/.vim/colors/mine.vim
-colo mine
+"colo mine
+colo jellybeans
 
 " vim-airline settings
 if !exists('g:airline_symbols')
