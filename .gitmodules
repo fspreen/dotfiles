@@ -26,3 +26,6 @@
 [submodule "vim/pack/default/start/jellybeans.vim"]
 	path = vim/pack/default/start/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim
+[submodule "vim/pack/default/start/vim-devicons"]
+	path = vim/pack/default/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
