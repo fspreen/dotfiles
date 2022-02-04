@@ -14,7 +14,7 @@
 	path = vim/pack/default/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree
 [submodule "nerdtree-git-plugin"]
-	path = vim/pack/default/start/nerdtree-git-plugin
+	path = vim/pack/zzz-preload/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin
 [submodule "vimwiki"]
 	path = vim/pack/default/start/vimwiki
