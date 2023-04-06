@@ -296,6 +296,10 @@ let g:vimwiki_list = [{
 " be used if we want GitHub to preview the files properly.
 
 " ALE settings
+" ALE's virtualtext feature indicates warnings/errors as 'ghost' comment text
+" on the line of the error.  I don't like it, it causes confusion about the
+" objective contents of the file.
+let g:ale_virtualtext_cursor = 'disabled'
 " Tell pyls not to use pylint.  If pylint is installed, ALE will use it
 " directly.
 let g:ale_python_pyls_config = { 'pyls' : {
