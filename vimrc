@@ -219,6 +219,8 @@ let g:airline#extensions#whitespace#symbol="\u2021"
 set laststatus=2
 " toggle spacing checks
 nmap <F7> :AirlineToggleWhitespace<CR>
+" toggle hover info
+nmap <F6> :ALEHover<CR>
 
 " tagbar keymap and settings
 " sort by file order, not alphabetically
@@ -305,6 +307,25 @@ let g:ale_virtualtext_cursor = 'disabled'
 let g:ale_python_pyls_config = { 'pyls' : {
 	\ 'plugins' : {'pylint' : {'enabled' : v:false }}
 	\ }}
+" hover info
+if has("popupwin")
+	let g:ale_floating_preview = 1
+	" let g:ale_floating_window_border = ['|', '-', '+', '+', '+', '+', '|', '-']
+	" left, top, UpperLeft, UpperRight?, LowerRight, LowerLeft, right, bottom
+	" NOTE:  UpperRight seems to be overwritten with 'X' for some reason...
+	let g:ale_floating_window_border = [
+		\ "\u2502",
+		\ "\u2500",
+		\ "\u256d",
+		\ "\u256e",
+		\ "\u256f",
+		\ "\u2570",
+		\ "\u2502",
+		\ "\u2500"
+		\ ]
+else
+	let g:ale_hover_to_preview = 1
+endif
 
 " Site-specific configuration
 " expand() avoids system call differences on Cygwin
