@@ -26,6 +26,15 @@ shopt -s checkwinsize
 # One use case is viewing compressed files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+##### COMMAND NOT FOUND #####
+# Some distros use a helper utility in the system-wide bashrc file.
+# In particular, Ubuntu-based distros call a Python script to announce if the
+# command is available in the repositories.  This is kind of slow.  Remove it.
+function command_not_found_handle {
+    printf "%s: command not found\n" "$1" >&2
+    return 127
+}
+
 ##### COLORS #####
 
 # Detect color capability
@@ -49,6 +58,8 @@ if [ -n "$force_color_prompt" ]; then
 	color_prompt=
     fi
 fi
+
+##### PROMPT #####
 
 if [ "$color_prompt" = yes ]; then
     # user@host:~/dir$ _
