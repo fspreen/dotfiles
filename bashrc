@@ -117,3 +117,15 @@ fi
 
 # Use colors for man pages
 source ~/lesscolors
+
+##### FZF #####
+# use Bash keybindings and completions, if installed
+# Arch
+if [ -f /usr/share/fzf/key-bindings.bash ] ; then
+    source /usr/share/fzf/completion.bash
+    source /usr/share/fzf/key-bindings.bash
+# Debian/Ubuntu
+elif [ -f /usr/share/doc/fzf/examples/key-bindings.bash ] ; then
+    source /usr/share/bash-completion/completions/fzf
+    source /usr/share/doc/fzf/examples/key-bindings.bash
+fi
