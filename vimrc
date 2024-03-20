@@ -50,6 +50,8 @@ endif
 
 " Sudo write
 cmap w!! w !sudo tee >/dev/null %
+" Fix my persistent typo
+command Noh noh
 
 " ----- Interface Options -----
 
