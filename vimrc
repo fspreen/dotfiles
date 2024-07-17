@@ -329,6 +329,11 @@ else
 	let g:ale_hover_to_preview = 1
 endif
 
+" FZF plugin under Debian-based systems (incl. Ubuntu)
+if filereadable('/usr/share/doc/fzf/examples/fzf.vim')
+	set rtp+=/usr/share/doc/fzf/examples
+endif
+
 " Site-specific configuration
 " expand() avoids system call differences on Cygwin
 if filereadable(expand('~/.vim/siterc'))
