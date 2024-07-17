@@ -32,3 +32,6 @@
 [submodule "vim-just"]
 	path = vim/pack/default/start/vim-just
 	url = https://github.com/NoahTheDuke/vim-just
+[submodule "vim/fzf.vim"]
+	path = vim/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
