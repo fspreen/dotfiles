@@ -112,6 +112,10 @@ set numberwidth=1
 " show partial commands
 set showcmd
 
+" tab completion in commands
+set wildoptions=pum
+set wildmenu
+
 " spell-checking
 "set spell
 
