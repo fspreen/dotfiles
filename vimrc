@@ -113,8 +113,14 @@ set numberwidth=1
 set showcmd
 
 " tab completion in commands
-set wildoptions=pum
-set wildmenu
+if v:version > 802 || (v:version == 802 && has("patch4325"))
+	set wildoptions=pum
+	set wildmenu
+else
+	" imitate bash
+	set wildmode=longest,full
+	set nowildmenu
+endif
 
 " spell-checking
 "set spell
