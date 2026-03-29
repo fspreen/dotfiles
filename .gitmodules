@@ -3,7 +3,7 @@
 	url = https://github.com/vim-airline/vim-airline
 [submodule "ale"]
 	path = vim/pack/default/start/ale
-	url = https://github.com/w0rp/ale
+	url = https://github.com/dense-analysis/ale
 [submodule "fugitive"]
 	path = vim/pack/default/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
