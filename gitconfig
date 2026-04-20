@@ -19,6 +19,8 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
+[init]
+	defaultBranch = "main"
 [color]
 	branch = true
 	diff = true
