@@ -12,7 +12,7 @@
 	url = https://github.com/majutsushi/tagbar
 [submodule "nerdtree"]
 	path = vim/pack/default/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree
+	url = https://github.com/preservim/nerdtree
 [submodule "nerdtree-git-plugin"]
 	path = vim/pack/zzz-preload/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin
