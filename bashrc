@@ -41,6 +41,8 @@ function command_not_found_handle {
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
     screen-256color*) color_prompt=yes;;
+    alacritty*) color_prompt=yes;;
+    xterm-ghostty|ghostty|*-ghostty) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
