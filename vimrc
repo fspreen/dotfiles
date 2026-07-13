@@ -23,8 +23,8 @@ if has("autocmd")
 		\   exe "normal g`\"" |
 		\ endif
 
-		" Trim trailing whitespace on Python, Perl, C, C++, .h files
-		autocmd BufWrite *.py,*.pl,*.c,*.cpp,*.c++,*.h :%s/[ \t]\+$//e
+		" Trim trailing whitespace on Python, Perl, C, C++, .h, Rust files
+		autocmd BufWrite *.py,*.pl,*.c,*.cpp,*.c++,*.h,*.rs :%s/[ \t]\+$//e
 
 		" Close NERDTree if it's the only thing left open in a tab
 		autocmd BufEnter *
